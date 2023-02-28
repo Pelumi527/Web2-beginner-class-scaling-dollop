@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;600;700&display=swap');
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+    background-color: hsl(0, 0%, 81%);
+}
+
+.container{
+    padding: 50px 20px;
+}
+
+.box-1{
+    border-radius: 8px;
+    background-color: hsl(263, 55%, 52%);
+    padding: 25px;
+    color: hsl(0, 0%, 100%);
+    position: relative;
+}
+
+.img-quote{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+}
+
+.details{
+    display: flex;
+}
+
+.details img{
+    height: 35px;
+    width: 35px;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+.name-box{
+    margin-left: 10px;
+}
+.name-box p{
+    margin: 0;
+    padding: 0;
+}
+
+.name-box p:first-of-type{
+    font-weight: 600;
+}
+
+.name-box p:last-of-type {
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.text-box{
+    z-index: 2;
+    position: relative;
+}
+
+.text-box p:first-of-type{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.text-box p:last-of-type {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.box-2{
+    background-color: hsl(217, 19%, 35%);
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 25px;
+    color: hsl(0, 0%, 100%);
+}
+
+.box-3 {
+    background-color: hsl(0, 0%, 100%);
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 25px;
+    color: hsl(217, 19%, 35%);
+}
+
+.box-4{
+    background-color: hsl(219, 29%, 14%);
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 25px;
+    color: hsl(0, 0%, 100%);
+}
+
+.box-5 {
+    background-color: hsl(0, 0%, 100%);
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 25px;
+    color: hsl(217, 19%, 35%);
+}
+
+@media screen and (min-width:850px) {
+   .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:"box-1 box-1 box-2 box-5"
+                        "box-3 box-4 box-4 box-5" ;
+    gap: 20px;
+   }
+
+   .box-1{
+    grid-area: box-1;
+   }
+
+   .box-2 {
+       grid-area: box-2;
+       margin-top: 0px;
+   }
+
+   .box-3 {
+        grid-area: box-3;
+        margin-top: 0px;
+   }
+
+   .box-4 {
+        grid-area: box-4;
+        margin-top: 0px;
+   }
+
+   .box-5 {
+        grid-area: box-5;
+        margin-top: 0px;
+   }
+}
+
